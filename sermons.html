@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sermons | Assemblies Of God Ministry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .sermons-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1518834103326-6d3eea1b7ab8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 40vh;
+            margin-top: 70px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+        
+        .sermons-container {
+            padding: 80px 0;
+            background: #f9f9f9;
+        }
+        
+        .sermons-filter {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        
+        .filter-title {
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: var(--font-body);
+        }
+        
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        .search-box {
+            position: relative;
+            max-width: 400px;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px 12px 45px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-family: var(--font-body);
+        }
+        
+        .search-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+        }
+        
+        .sermons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .sermon-card-large {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .sermon-card-large:hover {
+            transform: translateY(-5px);
+        }
+        
+        .sermon-media {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .sermon-media img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .sermon-card-large:hover .play-overlay {
+            opacity: 1;
+        }
+        
+        .play-btn-large {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .sermon-info {
+            padding: 25px;
+        }
+        
+        .sermon-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        .sermon-date {
+            color: var(--accent);
+            font-weight: 500;
+        }
+        
+        .sermon-series {
+            color: var(--secondary);
+            background: #e8f4fc;
+            padding: 3px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .sermon-title {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .sermon-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .sermon-actions {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .action-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 20px;
+            background: #f5f5f5;
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.3s;
+            font-size: 0.9rem;
+        }
+        
+        .action-btn:hover {
+            background: var(--secondary);
+            color: white;
+        }
+        
+        .action-btn.watch {
+            background: #ffeaea;
+            color: var(--accent);
+        }
+        
+        .action-btn.listen {
+            background: #e8f4fc;
+            color: var(--secondary);
+        }
+        
+        .action-btn.download {
+            background: #f0f7e8;
+            color: var(--green);
+        }
+        
+        .featured-series {
+            margin-top: 60px;
+        }
+        
+        .series-card {
+            background: linear-gradient(135deg, var(--primary), #1A252F);
+            color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-top: 30px;
+        }
+        
+        .series-content {
+            padding: 40px;
+        }
+        
+        .series-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        .series-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-family: var(--font-heading);
+        }
+        
+        .series-description {
+            margin-bottom: 30px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .series-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 40px;
+        }
+        
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .page-btn.active,
+        .page-btn:hover {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+        }
+        
+        @media (max-width: 992px) {
+            .series-card {
+                grid-template-columns: 1fr;
+            }
+            
+            .series-image {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .sermons-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .sermon-actions {
+                flex-direction: column;
+            }
+            
+            .action-btn {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas cross-icon">✝</i> Assemblies Of God</h1>
+                <p>Ministry Center</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-user"></i> About Pastor</a></li>
+                <li><a href="sermons.html" class="active"><i class="fas fa-bible"></i> Sermons</a></li>
+                <li><a href="blog.html"><i class="fas fa-book-open"></i> Blog</a></li>
+                <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#" class="donate-btn"><i class="fas fa-heart"></i> Give Online</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="sermons-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 style="font-family: var(--font-heading); font-size: 3rem; color: var(--gold); margin-bottom: 20px;">Sermons & Teachings</h1>
+                <p style="font-size: 1.2rem;">Biblical messages that transform lives. Watch, listen, or download.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sermons Container -->
+    <section class="sermons-container">
+        <div class="container">
+            <!-- Filter Section -->
+            <div class="sermons-filter">
+                <h3 class="filter-title"><i class="fas fa-filter"></i> Filter Sermons</h3>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All Sermons</button>
+                    <button class="filter-btn" data-filter="recent">Recent</button>
+                    <button class="filter-btn" data-filter="popular">Most Popular</button>
+                    <button class="filter-btn" data-filter="series">Series</button>
+                    <button class="filter-btn" data-filter="topical">Topical</button>
+                    <button class="filter-btn" data-filter="holiday">Holiday</button>
+                </div>
+                
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search sermons by topic, verse, or keyword..." id="sermonSearch">
+                </div>
+            </div>
+
+            <!-- Featured Series -->
+            <div class="featured-series">
+                <h2 class="section-title">Featured Series</h2>
+                <div class="series-card">
+                    <div class="series-content">
+                        <div class="series-badge">Current Series</div>
+                        <h3 class="series-title">Journey Through Psalms</h3>
+                        <p class="series-description">Discover the richness of the Psalms in this 8-part series exploring worship, lament, praise, and God's faithfulness through Israel's songbook.</p>
+                        <a href="#" class="btn-primary">Start Series <i class="fas fa-play-circle"></i></a>
+                    </div>
+                    <div class="series-image">
+                        <img src="https://images.unsplash.com/photo-1518834103326-6d3eea1b7ab8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Psalms Series">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sermons Grid -->
+            <h2 class="section-title" style="margin-top: 60px;">All Sermons</h2>
+            <div class="sermons-grid" id="sermonsGrid">
+                <!-- Sermon 1 -->
+                <div class="sermon-card-large" data-category="recent">
+                    <div class="sermon-media">
+                        <img src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Faith in Difficult Times">
+                        <div class="play-overlay">
+                            <div class="play-btn-large">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-info">
+                        <div class="sermon-meta">
+                            <span class="sermon-date">May 15, 2026</span>
+                            <span class="sermon-series">Overcoming Challenges</span>
+                        </div>
+                        <h3 class="sermon-title">Faith in Difficult Times</h3>
+                        <p class="sermon-description">Finding strength and hope when facing life's challenges. Based on James 1:2-4.</p>
+                        <div class="sermon-actions">
+                            <a href="https://youtube.com/watch?v=example1" target="_blank" class="action-btn watch">
+                                <i class="fas fa-play-circle"></i> Watch
+                            </a>
+                            <a href="https://spotify.com/episode/example1" target="_blank" class="action-btn listen">
+                                <i class="fas fa-headphones"></i> Listen
+                            </a>
+                            <a href="sermon-notes/faith-in-difficult-times.pdf" class="action-btn download">
+                                <i class="fas fa-download"></i> Notes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sermon 2 -->
+                <div class="sermon-card-large" data-category="popular">
+                    <div class="sermon-media">
+                        <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="The Power of Forgiveness">
+                        <div class="play-overlay">
+                            <div class="play-btn-large">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-info">
+                        <div class="sermon-meta">
+                            <span class="sermon-date">May 8, 2026</span>
+                            <span class="sermon-series">Heart Matters</span>
+                        </div>
+                        <h3 class="sermon-title">The Power of Forgiveness</h3>
+                        <p class="sermon-description">Breaking free from bitterness and embracing healing. Based on Matthew 6:14-15.</p>
+                        <div class="sermon-actions">
+                            <a href="https://youtube.com/watch?v=example2" target="_blank" class="action-btn watch">
+                                <i class="fas fa-play-circle"></i> Watch
+                            </a>
+                            <a href="https://spotify.com/episode/example2" target="_blank" class="action-btn listen">
+                                <i class="fas fa-headphones"></i> Listen
+                            </a>
+                            <a href="sermon-notes/power-of-forgiveness.pdf" class="action-btn download">
+                                <i class="fas fa-download"></i> Notes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sermon 3 -->
+                <div class="sermon-card-large" data-category="series">
+                    <div class="sermon-media">
+                        <img src="https://images.unsplash.com/photo-1549056572-75914d5d03fd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Living with Purpose">
+                        <div class="play-overlay">
+                            <div class="play-btn-large">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-info">
+                        <div class="sermon-meta">
+                            <span class="sermon-date">April 1, 2026</span>
+                            <span class="sermon-series">Purpose Driven Life</span>
+                        </div>
+                        <h3 class="sermon-title">Living with Purpose</h3>
+                        <p class="sermon-description">Discovering God's unique plan for your life. Based on Jeremiah 29:11.</p>
+                        <div class="sermon-actions">
+                            <a href="https://youtube.com/watch?v=example3" target="_blank" class="action-btn watch">
+                                <i class="fas fa-play-circle"></i> Watch
+                            </a>
+                            <a href="https://spotify.com/episode/example3" target="_blank" class="action-btn listen">
+                                <i class="fas fa-headphones"></i> Listen
+                            </a>
+                            <a href="sermon-notes/living-with-purpose.pdf" class="action-btn download">
+                                <i class="fas fa-download"></i> Notes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sermon 4 -->
+                <div class="sermon-card-large" data-category="topical">
+                    <div class="sermon-media">
+                        <img src="https://images.unsplash.com/photo-1518834103326-6d3eea1b7ab8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Prayer That Moves Mountains">
+                        <div class="play-overlay">
+                            <div class="play-btn-large">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-info">
+                        <div class="sermon-meta">
+                            <span class="sermon-date">March 25, 2026</span>
+                            <span class="sermon-series">Prayer Life</span>
+                        </div>
+                        <h3 class="sermon-title">Prayer That Moves Mountains</h3>
+                        <p class="sermon-description">Understanding the power of persistent prayer. Based on Mark 11:22-24.</p>
+                        <div class="sermon-actions">
+                            <a href="https://youtube.com/watch?v=example4" target="_blank" class="action-btn watch">
+                                <i class="fas fa-play-circle"></i> Watch
+                            </a>
+                            <a href="https://spotify.com/episode/example4" target="_blank" class="action-btn listen">
+                                <i class="fas fa-headphones"></i> Listen
+                            </a>
+                            <a href="sermon-notes/prayer-moves-mountains.pdf" class="action-btn download">
+                                <i class="fas fa-download"></i> Notes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sermon 5 -->
+                <div class="sermon-card-large" data-category="holiday">
+                    <div class="sermon-media">
+                        <img src="https://images.unsplash.com/photo-1518834103326-6d3eea1b7ab8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="The Resurrection Power">
+                        <div class="play-overlay">
+                            <div class="play-btn-large">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-info">
+                        <div class="sermon-meta">
+                            <span class="sermon-date">March 31, 2026</span>
+                            <span class="sermon-series">Easter Special</span>
+                        </div>
+                        <h3 class="sermon-title">The Resurrection Power</h3>
+                        <p class="sermon-description">Celebrating the victory of Christ over death. Based on 1 Corinthians 15.</p>
+                        <div class="sermon-actions">
+                            <a href="https://youtube.com/watch?v=example5" target="_blank" class="action-btn watch">
+                                <i class="fas fa-play-circle"></i> Watch
+                            </a>
+                            <a href="https://spotify.com/episode/example5" target="_blank" class="action-btn listen">
+                                <i class="fas fa-headphones"></i> Listen
+                            </a>
+                            <a href="sermon-notes/resurrection-power.pdf" class="action-btn download">
+                                <i class="fas fa-download"></i> Notes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sermon 6 -->
+                <div class="sermon-card-large" data-category="recent">
+                    <div class="sermon-media">
+                        <img src="https://images.unsplash.com/photo-1518834103326-6d3eea1b7ab8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Walking in the Spirit">
+                        <div class="play-overlay">
+                            <div class="play-btn-large">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sermon-info">
+                        <div class="sermon-meta">
+                            <span class="sermon-date">March 18, 2026</span>
+                            <span class="sermon-series">Spiritual Growth</span>
+                        </div>
+                        <h3 class="sermon-title">Walking in the Spirit</h3>
+                        <p class="sermon-description">Living a Spirit-led life in a world of flesh. Based on Galatians 5:16-25.</p>
+                        <div class="sermon-actions">
+                            <a href="https://youtube.com/watch?v=example6" target="_blank" class="action-btn watch">
+                                <i class="fas fa-play-circle"></i> Watch
+                            </a>
+                            <a href="https://spotify.com/episode/example6" target="_blank" class="action-btn listen">
+                                <i class="fas fa-headphones"></i> Listen
+                            </a>
+                            <a href="sermon-notes/walking-in-spirit.pdf" class="action-btn download">
+                                <i class="fas fa-download"></i> Notes
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn">5</button>
+                <button class="page-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3><i class="fas cross-icon">✝</i> Assemblies Of God Ministry</h3>
+                    <p>123 Grace Street, Faith City, FC 12345</p>
+                    <p><i class="fas fa-phone"></i> 0543758438</p>
+                    <p><i class="fas fa-envelope"></i> info@livingwatersministry.org</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Pastor</a></li>
+                        <li><a href="sermons.html">Sermons</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Get New Sermons</h4>
+                        <form class="subscribe-form">
+                            <input type="email" placeholder="Your Email" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026: Assemblies Of God  Ministry. All rights reserved.</p>
+                <p>Website designed with <i class="fas fa-heart"></i> for God's glory</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    
+    <script>
+        // Sermon Filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const sermonCards = document.querySelectorAll('.sermon-card-large');
+            const searchInput = document.getElementById('sermonSearch');
+            
+            // Filter by button click
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Filter sermon cards
+                    sermonCards.forEach(card => {
+                        if (filter === 'all') {
+                            card.style.display = 'block';
+                        } else {
+                            if (card.getAttribute('data-category') === filter) {
+                                card.style.display = 'block';
+                            } else {
+                                card.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            });
+            
+            // Search functionality
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                sermonCards.forEach(card => {
+                    const title = card.querySelector('.sermon-title').textContent.toLowerCase();
+                    const description = card.querySelector('.sermon-description').textContent.toLowerCase();
+                    const series = card.querySelector('.sermon-series').textContent.toLowerCase();
+                    
+                    if (title.includes(searchTerm) || 
+                        description.includes(searchTerm) || 
+                        series.includes(searchTerm)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+            
+            // Play button functionality
+            const playButtons = document.querySelectorAll('.play-btn-large');
+            playButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const card = this.closest('.sermon-card-large');
+                    const watchLink = card.querySelector('.action-btn.watch');
+                    
+                    if (watchLink && watchLink.href) {
+                        window.open(watchLink.href, '_blank');
+                    }
+                });
+            });
+            
+            // Pagination
+            const pageButtons = document.querySelectorAll('.page-btn');
+            pageButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (this.querySelector('i')) return; // Skip arrow buttons
+                    
+                    pageButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // In a real app, this would load the page content
+                    alert(Loading page ${this.textContent}...);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
