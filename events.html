@@ -3,94 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Events | Assemblies of God Ministry</title>
+  <title>Events | Pastor Benedict Gbande Gbate</title>
+  <meta name="description" content="Upcoming church events, meetings, conferences and gatherings." />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
   <header class="site-header">
-    <nav class="navbar">
-      <div class="container nav-inner">
-        <a class="brand" href="index.html">
-          <div class="brand-mark">✝</div>
-          <div class="brand-text">
-            <h1>Assemblies of God</h1>
-            <p>Ministry Center</p>
-          </div>
-        </a>
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><i class="fa-solid fa-cross"></i></span>
+        <span class="brand-text"><strong>Pastor Benedict Gbande Gbate</strong><small>Assemblies of God Ministry</small></span>
+      </a>
 
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-        <ul class="nav-menu" id="navMenu">
-          <li><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-          <li><a class="nav-link" href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
-          <li><a class="nav-link" href="sermons.html"><i class="fa-solid fa-book-bible"></i> Sermons</a></li>
-          <li><a class="nav-link active" href="events.html"><i class="fa-solid fa-calendar-days"></i> Events</a></li>
-          <li><a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-          <li><a class="nav-link btn btn-give" href="contact.html#give"><i class="fa-solid fa-heart"></i> Give Online</a></li>
-        </ul>
-      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Biography</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a class="active" href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="btn btn-small" href="contact.html#give">Give Online</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="page-hero">
-    <div class="container">
-      <h2>Events & Programs</h2>
-      <p class="muted">Stay updated with services, revivals, teachings, and prayer programs.</p>
+  <section class="page-hero small">
+    <div class="container page-hero-inner">
+      <div>
+        <p class="pill"><i class="fa-solid fa-calendar-days"></i> Events</p>
+        <h1>Upcoming Church Events</h1>
+        <p class="lead">Add your real dates and locations here — I can also connect it to Google Calendar later.</p>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="grid cards-2">
-        <div class="card event">
-          <div class="event-head">
-            <div>
-              <h3>Weekly Teaching Session</h3>
-              <p class="muted">The Qodesh Mountains (Online)</p>
-            </div>
-            <span class="pill">Weekly</span>
-          </div>
-          <p>Join our weekly teaching sessions focused on prayer, holiness, and spiritual growth.</p>
-          <div class="event-meta">
-            <span><i class="fa-solid fa-calendar"></i> Every Week</span>
-            <span><i class="fa-solid fa-location-dot"></i> Online</span>
-          </div>
-          <a class="btn btn-primary btn-sm" href="contact.html">Request Link</a>
-        </div>
+      <div class="events-grid">
+        <article class="event-card">
+          <h3>Prayer & Revival Night</h3>
+          <p class="muted"><i class="fa-solid fa-location-dot"></i> Church Auditorium / Online</p>
+          <p class="muted"><i class="fa-solid fa-clock"></i> Date: To be announced</p>
+          <p>Intense worship, intercession, and teaching—focused on revival and holiness.</p>
+          <a class="btn btn-small" href="contact.html">Get Details</a>
+        </article>
 
-        <div class="card event">
-          <div class="event-head">
-            <div>
-              <h3>Corporate Prayer Meeting</h3>
-              <p class="muted">Prayer Movement</p>
-            </div>
-            <span class="pill">Prayer</span>
-          </div>
-          <p>A time of intercession, worship, and spiritual strengthening.</p>
-          <div class="event-meta">
-            <span><i class="fa-solid fa-clock"></i> Saturdays 8:00 AM</span>
-            <span><i class="fa-solid fa-location-dot"></i> Church Auditorium</span>
-          </div>
-          <a class="btn btn-outline btn-sm" href="contact.html#prayer">Submit Prayer Request</a>
-        </div>
-      </div>
+        <article class="event-card">
+          <h3>Weekly Teaching Session</h3>
+          <p class="muted"><i class="fa-solid fa-location-dot"></i> Online</p>
+          <p class="muted"><i class="fa-solid fa-clock"></i> Every week</p>
+          <p>Word-centered discipleship to train believers in the ways of Jesus.</p>
+          <a class="btn btn-small" href="sermons.html">Watch Previous</a>
+        </article>
 
-      <div class="note">
-        <strong>Update tip:</strong> You can add more events easily by copying one <code>.card.event</code> block.
+        <article class="event-card">
+          <h3>Holiness & Purity Conference</h3>
+          <p class="muted"><i class="fa-solid fa-location-dot"></i> Ghana / International Invite</p>
+          <p class="muted"><i class="fa-solid fa-clock"></i> Date: Coming soon</p>
+          <p>A gathering to raise uncompromising faith, integrity, and holy living.</p>
+          <a class="btn btn-small" href="contact.html">Partner</a>
+        </article>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container footer-bottom">
-      <p class="muted small">© <span id="year"></span> Assemblies of God Ministry. All rights reserved.</p>
-      <p class="muted small">Built for God’s glory ✨</p>
+      <p>© <span id="year"></span> Pastor Benedict Gbande Gbate. All rights reserved.</p>
     </div>
   </footer>
 
