@@ -3,101 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sermons | Assemblies of God Ministry</title>
+  <title>Sermons | Pastor Benedict Gbande Gbate</title>
+  <meta name="description" content="Watch and listen to sermons, teachings and messages." />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
   <header class="site-header">
-    <nav class="navbar">
-      <div class="container nav-inner">
-        <a class="brand" href="index.html">
-          <div class="brand-mark">✝</div>
-          <div class="brand-text">
-            <h1>Assemblies of God</h1>
-            <p>Ministry Center</p>
-          </div>
-        </a>
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><i class="fa-solid fa-cross"></i></span>
+        <span class="brand-text"><strong>Pastor Benedict Gbande Gbate</strong><small>Assemblies of God Ministry</small></span>
+      </a>
 
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-        <ul class="nav-menu" id="navMenu">
-          <li><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-          <li><a class="nav-link" href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
-          <li><a class="nav-link active" href="sermons.html"><i class="fa-solid fa-book-bible"></i> Sermons</a></li>
-          <li><a class="nav-link" href="events.html"><i class="fa-solid fa-calendar-days"></i> Events</a></li>
-          <li><a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-          <li><a class="nav-link btn btn-give" href="contact.html#give"><i class="fa-solid fa-heart"></i> Give Online</a></li>
-        </ul>
-      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Biography</a></li>
+        <li><a class="active" href="sermons.html">Sermons</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="btn btn-small" href="contact.html#give">Give Online</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="page-hero">
-    <div class="container">
-      <h2>Sermons & Teachings</h2>
-      <p class="muted">Weekly messages that strengthen faith, prayer, holiness, and purpose.</p>
+  <section class="page-hero small">
+    <div class="container page-hero-inner">
+      <div>
+        <p class="pill"><i class="fa-solid fa-circle-play"></i> Sermons</p>
+        <h1>Messages That Build Faith</h1>
+        <p class="lead">Replace the “Watch” links with your YouTube links (I can help you embed them too).</p>
+      </div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="grid cards-3">
-        <article class="card sermon">
-          <div class="sermon-top">
-            <span class="pill">Latest</span>
-            <span class="muted small">Audio/Video</span>
-          </div>
-          <h3>Holiness: The Call of Every Believer</h3>
-          <p class="muted">A teaching on purity, consecration, and walking in the fear of God.</p>
-          <div class="sermon-actions">
-            <a class="btn btn-primary btn-sm" href="#"><i class="fa-solid fa-play"></i> Watch</a>
-            <a class="btn btn-outline btn-sm" href="#"><i class="fa-solid fa-headphones"></i> Listen</a>
-          </div>
-        </article>
-
-        <article class="card sermon">
-          <div class="sermon-top">
-            <span class="pill">Teaching</span>
-            <span class="muted small">Bible Study</span>
-          </div>
-          <h3>Prayer & Intimacy with the Holy Spirit</h3>
-          <p class="muted">Learning to build consistent prayer life and spiritual discipline.</p>
-          <div class="sermon-actions">
-            <a class="btn btn-primary btn-sm" href="#"><i class="fa-solid fa-play"></i> Watch</a>
-            <a class="btn btn-outline btn-sm" href="#"><i class="fa-solid fa-file-lines"></i> Notes</a>
+      <div class="cards-3">
+        <article class="sermon">
+          <div class="sermon-thumb" style="background-image:url('https://images.unsplash.com/photo-1548625361-58a9b86aa83b?auto=format&fit=crop&w=1400&q=80');"></div>
+          <div class="sermon-body">
+            <p class="tag">Holiness</p>
+            <h3>Walking in Purity</h3>
+            <p class="muted">A message on godly character and holy living.</p>
+            <div class="sermon-actions">
+              <a class="btn btn-small" href="#"><i class="fa-brands fa-youtube"></i> Watch</a>
+              <a class="btn btn-small btn-ghost" href="#"><i class="fa-solid fa-headphones"></i> Audio</a>
+            </div>
           </div>
         </article>
 
-        <article class="card sermon">
-          <div class="sermon-top">
-            <span class="pill">Revival</span>
-            <span class="muted small">Qodesh Mountains</span>
-          </div>
-          <h3>Revival Fire: Returning to First Love</h3>
-          <p class="muted">A call to renewal, repentance, and passion for God’s presence.</p>
-          <div class="sermon-actions">
-            <a class="btn btn-primary btn-sm" href="#"><i class="fa-solid fa-play"></i> Watch</a>
-            <a class="btn btn-outline btn-sm" href="#"><i class="fa-solid fa-share"></i> Share</a>
+        <article class="sermon">
+          <div class="sermon-thumb" style="background-image:url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1400&q=80');"></div>
+          <div class="sermon-body">
+            <p class="tag">Prayer</p>
+            <h3>The Secret Place</h3>
+            <p class="muted">How intimacy with God births strength and revival.</p>
+            <div class="sermon-actions">
+              <a class="btn btn-small" href="#"><i class="fa-brands fa-youtube"></i> Watch</a>
+              <a class="btn btn-small btn-ghost" href="#"><i class="fa-solid fa-file-lines"></i> Notes</a>
+            </div>
           </div>
         </article>
-      </div>
 
-      <div class="note">
-        <strong>Tip:</strong> Replace the <code>#</code> links with YouTube, Facebook, Google Drive, or Audio links when available.
+        <article class="sermon">
+          <div class="sermon-thumb" style="background-image:url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1400&q=80');"></div>
+          <div class="sermon-body">
+            <p class="tag">Discipleship</p>
+            <h3>Students of the Word</h3>
+            <p class="muted">Training believers through Scripture and prayer.</p>
+            <div class="sermon-actions">
+              <a class="btn btn-small" href="#"><i class="fa-brands fa-youtube"></i> Watch</a>
+              <a class="btn btn-small btn-ghost" href="#"><i class="fa-solid fa-download"></i> Download</a>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container footer-bottom">
-      <p class="muted small">© <span id="year"></span> Assemblies of God Ministry. All rights reserved.</p>
-      <p class="muted small">Built for God’s glory ✨</p>
+      <p>© <span id="year"></span> Pastor Benedict Gbande Gbate. All rights reserved.</p>
     </div>
   </footer>
 
