@@ -3,106 +3,149 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Assemblies of God Ministry</title>
+  <title>Contact | Pastor Benedict Gbande Gbate</title>
+  <meta name="description" content="Contact, prayer requests, counseling, invitations and giving." />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
   <header class="site-header">
-    <nav class="navbar">
-      <div class="container nav-inner">
-        <a class="brand" href="index.html">
-          <div class="brand-mark">✝</div>
-          <div class="brand-text">
-            <h1>Assemblies of God</h1>
-            <p>Ministry Center</p>
-          </div>
-        </a>
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><i class="fa-solid fa-cross"></i></span>
+        <span class="brand-text"><strong>Pastor Benedict Gbande Gbate</strong><small>Assemblies of God Ministry</small></span>
+      </a>
 
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-        <ul class="nav-menu" id="navMenu">
-          <li><a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-          <li><a class="nav-link" href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
-          <li><a class="nav-link" href="sermons.html"><i class="fa-solid fa-book-bible"></i> Sermons</a></li>
-          <li><a class="nav-link" href="events.html"><i class="fa-solid fa-calendar-days"></i> Events</a></li>
-          <li><a class="nav-link active" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-          <li><a class="nav-link btn btn-give" href="#give"><i class="fa-solid fa-heart"></i> Give Online</a></li>
-        </ul>
-      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Biography</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+        <li><a class="btn btn-small" href="#give">Give Online</a></li>
+      </ul>
     </nav>
   </header>
 
-  <section class="page-hero">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p class="muted">We’d love to hear from you. Send a message, prayer request, or partnership inquiry.</p>
+  <section class="page-hero small">
+    <div class="container page-hero-inner">
+      <div>
+        <p class="pill"><i class="fa-solid fa-envelope"></i> Contact</p>
+        <h1>We’re Here For You</h1>
+        <p class="lead">Invitations • Counseling • Prayer Requests • Partnership</p>
+      </div>
     </div>
   </section>
 
   <section class="section">
-    <div class="container two-col">
+    <div class="container grid-2">
       <div class="panel">
-        <h3>Ministry Contact</h3>
-        <p class="muted"><i class="fa-solid fa-location-dot"></i> Tatale / Wa, Ghana</p>
-        <p class="muted"><i class="fa-solid fa-phone"></i> 0201050705</p>
-        <p class="muted"><i class="fa-solid fa-envelope"></i> beneictgbate@gmail.com</p>
-
-        <div class="spacer"></div>
-
-        <h3 id="give">Give / Support</h3>
-        <p class="muted">
-          Add your giving details here (MoMo number, bank details, or a payment link).
-        </p>
-        <div class="note">
-          <strong>Tip:</strong> If you want a real “Give Online” payment, tell me what you’ll use (MoMo, Paystack, etc.)
-          and I’ll plug it in.
+        <h2>Contact Information</h2>
+        <p class="muted">Replace these with the pastor’s official phone and email.</p>
+        <div class="contact-list">
+          <p><i class="fa-solid fa-location-dot"></i> Ghana • International Online Ministry</p>
+          <p><i class="fa-solid fa-phone"></i> +233 XXX XXX XXX</p>
+          <p><i class="fa-solid fa-envelope"></i> example@email.com</p>
+        </div>
+        <div class="social large">
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
         </div>
       </div>
 
-      <div>
-        <div class="card form-card" id="prayer">
-          <h3>Send a Message / Prayer Request</h3>
+      <div class="panel">
+        <h2>Send a Message</h2>
+        <form id="contactForm">
+          <div class="form-row">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
 
-          <!-- Works without backend using mailto -->
-          <form class="form" action="mailto:beneictgbate@gmail.com" method="post" enctype="text/plain">
-            <label>
-              Full Name
-              <input type="text" name="name" required placeholder="Your name" />
-            </label>
+          <div class="form-row">
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" required />
+          </div>
 
-            <label>
-              Email / Phone
-              <input type="text" name="contact" required placeholder="Your email or phone" />
-            </label>
+          <div class="form-row">
+            <label for="subject">Subject</label>
+            <input id="subject" name="subject" type="text" placeholder="Invitation / Counseling / Partnership..." required />
+          </div>
 
-            <label>
-              Message / Prayer Request
-              <textarea name="message" rows="6" required placeholder="Write your message..."></textarea>
-            </label>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
 
-            <button class="btn btn-primary" type="submit">
-              <i class="fa-solid fa-paper-plane"></i> Send
-            </button>
+          <button class="btn btn-wide" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+          <p class="muted tiny">This is a demo. If you want real email delivery, I’ll connect it to Formspree or EmailJS.</p>
+        </form>
+      </div>
+    </div>
+  </section>
 
-            <p class="muted small">
-              If your mail app doesn’t open, message directly on WhatsApp using your number link.
-            </p>
-          </form>
+  <!-- PRAYER REQUEST -->
+  <section id="prayer" class="section section-alt">
+    <div class="container">
+      <div class="cta-card">
+        <div>
+          <h2>Submit a Prayer Request</h2>
+          <p class="muted">Share your prayer request and we will pray with you.</p>
         </div>
       </div>
+
+      <div class="panel" style="margin-top:14px;">
+        <form id="prayerForm">
+          <div class="form-row">
+            <label for="pname">Your Name</label>
+            <input id="pname" type="text" required>
+          </div>
+
+          <div class="form-row">
+            <label for="pemail">Your Email</label>
+            <input id="pemail" type="email" required>
+          </div>
+
+          <div class="form-row">
+            <label for="preq">Prayer Request</label>
+            <textarea id="preq" rows="5" required></textarea>
+          </div>
+
+          <button class="btn btn-wide" type="submit"><i class="fa-solid fa-hands-praying"></i> Submit Request</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- GIVING -->
+  <section id="give" class="section">
+    <div class="container">
+      <div class="cta-card">
+        <div>
+          <h2>Give / Partner With The Ministry</h2>
+          <p class="muted">Support the work of prayer, discipleship and revival worldwide.</p>
+        </div>
+        <a class="btn" href="#"><i class="fa-solid fa-hand-holding-heart"></i> Add Payment Link</a>
+      </div>
+      <p class="muted tiny" style="margin-top:10px;">
+        If you want, I can add Paystack / Flutterwave / Stripe here.
+      </p>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container footer-bottom">
-      <p class="muted small">© <span id="year"></span> Assemblies of God Ministry. All rights reserved.</p>
-      <p class="muted small">Built for God’s glory ✨</p>
+      <p>© <span id="year"></span> Pastor Benedict Gbande Gbate. All rights reserved.</p>
     </div>
   </footer>
 
