@@ -1,218 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assemblies Of God Ministry | Pastor Benedict Gbande Gbate </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assemblies Of God Ministry | Pastor Benedict Gbande Gbate</title>
+
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <h1><i class="fas cross-icon">✝</i> Assemblies Of God</h1>
-                <p>Ministry Center</p>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="about.html"><i class="fas fa-user"></i> About Pastor</a></li>
-                <li><a href="sermons.html"><i class="fas fa-bible"></i> Sermons</a></li>             
-                <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li><a href="#" class="donate-btn"><i class="fas fa-heart"></i> Give Online</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html" aria-label="Go to homepage">
+        <h1><span class="cross-icon">✝</span> Assemblies Of God</h1>
+        <p>Ministry Center</p>
+      </a>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="about.html"><i class="fas fa-user"></i> About Pastor</a></li>
+        <li><a href="sermons.html"><i class="fas fa-bible"></i> Sermons</a></li>
+        <li><a href="events.html"><i class="fas fa-calendar-alt"></i> Events</a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        <li><a href="#" class="donate-btn"><i class="fas fa-heart"></i> Give Online</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-overlay">
+      <div class="container">
+        <div class="hero-content">
+          <h2>Welcome to Assemblies Of God Ministry</h2>
+          <h1>Where Faith Meets Grace</h1>
+          <p>Led by Pastor Benedict Gbande Gbate &amp; First Lady Margaret</p>
+
+          <div class="hero-buttons">
+            <a href="sermons.html" class="btn btn-primary">
+              <i class="fas fa-play-circle"></i> Watch Latest Sermon
+            </a>
+            <a href="events.html" class="btn btn-secondary">
+              <i class="fas fa-calendar-check"></i> Service Times
+            </a>
+          </div>
         </div>
-    </nav>
+      </div>
+    </div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay">
-            <div class="container">
-                <div class="hero-content">
-                    <h2>Welcome to Assemblies Of God Ministry</h2>
-                    <h1>Where Faith Meets Grace</h1>
-                    <p>Led by Pastor Benedict Gbande Gbate & First Lady Margaret</p>
-                    <div class="hero-buttons">
-                        <a href="sermons.html" class="btn-primary"><i class="fas fa-play-circle"></i> Watch Latest Sermon</a>
-                        <a href="events.html" class="btn-secondary"><i class="fas fa-calendar-check"></i> Service Times</a>
-                    </div>
-                </div>
-            </div>
+  <!-- SERVICE TIMES -->
+  <section class="section services-section">
+    <div class="container">
+      <h2 class="section-title">Join Us For Worship</h2>
+
+      <div class="grid services-grid">
+        <article class="card service-card">
+          <div class="service-icon"><i class="fas fa-sun"></i></div>
+          <h3>Sunday Service</h3>
+          <p class="service-time">9:00 AM &amp; 11:00 AM</p>
+          <p>Morning Worship &amp; Word</p>
+          <a href="#" class="service-link">Live Stream <i class="fas fa-external-link-alt"></i></a>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon"><i class="fas fa-pray"></i></div>
+          <h3>Wednesday Bible Study</h3>
+          <p class="service-time">7:00 PM</p>
+          <p>Mid-Week Spiritual Renewal</p>
+          <a href="#" class="service-link">Join Study <i class="fas fa-book"></i></a>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon"><i class="fas fa-users"></i></div>
+          <h3>Youth Ministry</h3>
+          <p class="service-time">Friday 6:00 PM</p>
+          <p>Ages 13-25</p>
+          <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </article>
+
+        <article class="card service-card">
+          <div class="service-icon"><i class="fas fa-hands-praying"></i></div>
+          <h3>Prayer Meeting</h3>
+          <p class="service-time">Saturday 8:00 AM</p>
+          <p>Corporate Prayer</p>
+          <a href="#" class="service-link">Prayer Requests <i class="fas fa-praying-hands"></i></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT PREVIEW -->
+  <section class="section about-preview">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Meet Pastor Benedict Gbande Gbate</h2>
+          <p>
+            Pastor Benedict had a strong desire to enroll in Bible school as early as 2015.
+            However, despite several attempts, he consistently sensed a divine restraint,
+            discerning that the time appointed by God had not yet come.
+          </p>
+          <a href="about.html" class="btn btn-primary">Read Full Biography <i class="fas fa-arrow-right"></i></a>
         </div>
-    </section>
 
-    <!-- Service Times -->
-    <section class="services-section">
-        <div class="container">
-            <h2 class="section-title">Join Us For Worship</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-sun"></i>
-                    </div>
-                    <h3>Sunday Service</h3>
-                    <p class="service-time">9:00 AM & 11:00 AM</p>
-                    <p>Morning Worship & Word</p>
-                    <a href="#" class="service-link">Live Stream <i class="fas fa-external-link-alt"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-pray"></i>
-                    </div>
-                    <h3>Wednesday Bible Study</h3>
-                    <p class="service-time">7:00 PM</p>
-                    <p>Mid-Week Spiritual Renewal</p>
-                    <a href="#" class="service-link">Join Study <i class="fas fa-book"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Youth Ministry</h3>
-                    <p class="service-time">Friday 6:00 PM</p>
-                    <p>Ages 13-25</p>
-                    <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-hands-praying"></i>
-                    </div>
-                    <h3>Prayer Meeting</h3>
-                    <p class="service-time">Saturday 8:00 AM</p>
-                    <p>Corporate Prayer</p>
-                    <a href="#" class="service-link">Prayer Requests <i class="fas fa-praying-hands"></i></a>
-                </div>
+        <div class="about-image">
+          <div class="image-frame">
+            <img src="ben.jpg" alt="Pastor Benedict Gbande Gbate" />
+            <div class="image-caption">
+              <h4>Pastor Benedict Gbande Gbate</h4>
+              <p>Junior Pastor</p>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Pastor Preview -->
-    <section class="about-preview">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Meet Pastor Benedict Gbande Gbate</h2>
-                    <p>Pastor Benedict had a strong desire to enroll in Bible school as early as 2015. However, despite several attempts, he consistently sensed a divine restraint, discerning that the time appointed by God had not yet come..</p>
-                    <a href="about.html" class="btn-primary">Read Full Biography <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="about-image">
-                    <div class="image-frame">
-                        <img src="ben.jpg" alt="Pastor Benedict Gbande Gbate">
-                        <div class="image-caption">
-                            <h4>Pastor Benedict Gbande Gbate</h4>
-                            <p>Junior Pastor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- QUICK LINKS -->
+  <section class="section quick-links">
+    <div class="container">
+      <div class="grid links-grid">
+        <a href="contact.html" class="link-card prayer-request">
+          <i class="fas fa-praying-hands"></i>
+          <h3>Submit Prayer Request</h3>
+          <p>We'll pray with you</p>
+        </a>
+
+        <a href="#" class="link-card online-giving">
+          <i class="fas fa-heart"></i>
+          <h3>Online Giving</h3>
+          <p>Support the ministry</p>
+        </a>
+
+        <a href="events.html" class="link-card upcoming-events">
+          <i class="fas fa-calendar-star"></i>
+          <h3>Upcoming Events</h3>
+          <p>See what's happening</p>
+        </a>
+
+        <a href="blog.html" class="link-card daily-devotional">
+          <i class="fas fa-book-bible"></i>
+          <h3>Daily Devotional</h3>
+          <p>Spiritual nourishment</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3><span class="cross-icon">✝</span> Assemblies Of God Ministry</h3>
+          <p>Wa, Upper West Region</p>
+          <p><i class="fas fa-phone"></i> 0201050705</p>
+          <p><i class="fas fa-envelope"></i> beneictgbate@gmail.com</p>
         </div>
-    </section>
 
-    <!-- Latest Sermons -->
-    <section class="sermons-section">
-        <div class="container">
-            <h2 class="section-title">Recent Sermons</h2>
-            <div class="sermons-grid">
-                <div class="sermon-card">
-                    <div class="sermon-thumbnail">
-                        <div class="play-button">
-                            <i class="fas fa-play"></i>
-                        </div>
-        
-
-    <!-- Quick Links -->
-    <section class="quick-links">
-        <div class="container">
-            <div class="links-grid">
-                <a href="contact.html" class="link-card prayer-request">
-                    <i class="fas fa-praying-hands"></i>
-                    <h3>Submit Prayer Request</h3>
-                    <p>We'll pray with you</p>
-                </a>
-                
-                <a href="#" class="link-card online-giving">
-                    <i class="fas fa-heart"></i>
-                    <h3>Online Giving</h3>
-                    <p>Support the ministry</p>
-                </a>
-                
-                <a href="events.html" class="link-card upcoming-events">
-                    <i class="fas fa-calendar-star"></i>
-                    <h3>Upcoming Events</h3>
-                    <p>See what's happening</p>
-                </a>
-                
-                <a href="blog.html" class="link-card daily-devotional">
-                    <i class="fas fa-book-bible"></i>
-                    <h3>Daily Devotional</h3>
-                    <p>Spiritual nourishment</p>
-                </a>
-            </div>
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Pastor</a></li>
+            <li><a href="sermons.html">Sermons</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3><i class="fas cross-icon">✝</i> Assemblies Of God Ministry</h3>
-                    <p>Wa Upper  West Region</p>
-                    <p><i class="fas fa-phone"></i> 0201050705</p>
-                    <p><i class="fas fa-envelope"></i> beneictgbate@gmail.com</p>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Pastor</a></li>
-                        <li><a href="sermons.html">Sermons</a></li>
-                        
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Connect With Us</h4>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-spotify"></i></a>
-                    </div>
-                    <div class="newsletter">
-                        <h4>Subscribe for Updates</h4>
-                        <form class="subscribe-form">
-                            <input type="email" placeholder="Your Email" required>
-                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 Assemblies O God Ministry. All rights reserved.</p>
-                <p>Website designed with <i class="fas fa-heart"></i> for God's glory</p>
-            </div>
+        <div class="footer-column">
+          <h4>Connect With Us</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-spotify"></i></a>
+          </div>
+
+          <div class="newsletter">
+            <h4>Subscribe for Updates</h4>
+            <form class="subscribe-form">
+              <input type="email" placeholder="Your Email" required />
+              <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+            </form>
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Assemblies Of God Ministry. All rights reserved.</p>
+        <p>Website designed with <i class="fas fa-heart"></i> for God's glory</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
+
 
