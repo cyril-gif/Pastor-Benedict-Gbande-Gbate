@@ -3,176 +3,185 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Assemblies of God Ministry | Pastor Benedict Gbande Gbate</title>
+  <title>Pastor Benedict Gbande Gbate | Assemblies of God Ministry</title>
+  <meta name="description" content="Official church website: sermons, events, prayer requests, and giving. Led by Pastor Benedict Gbande Gbate." />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-
-  <!-- NAV -->
+  <!-- HEADER / NAV -->
   <header class="site-header">
-    <nav class="navbar">
-      <div class="container nav-inner">
-        <a class="brand" href="index.html" aria-label="Go to Home">
-          <div class="brand-mark">✝</div>
-          <div class="brand-text">
-            <h1>Assemblies of God</h1>
-            <p>Ministry Center</p>
-          </div>
-        </a>
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand-mark"><i class="fa-solid fa-cross"></i></span>
+        <span class="brand-text">
+          <strong>Pastor Benedict Gbande Gbate</strong>
+          <small>Assemblies of God Ministry • The Qodesh Mountains</small>
+        </span>
+      </a>
 
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-controls="navMenu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
 
-        <ul class="nav-menu" id="navMenu">
-          <li><a class="nav-link active" href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-          <li><a class="nav-link" href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
-          <li><a class="nav-link" href="sermons.html"><i class="fa-solid fa-book-bible"></i> Sermons</a></li>
-          <li><a class="nav-link" href="events.html"><i class="fa-solid fa-calendar-days"></i> Events</a></li>
-          <li><a class="nav-link" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-          <li><a class="nav-link btn btn-give" href="contact.html#give"><i class="fa-solid fa-heart"></i> Give Online</a></li>
-        </ul>
-      </div>
+      <ul class="nav-links">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="about.html">Biography</a></li>
+        <li><a href="sermons.html">Sermons</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a class="btn btn-small" href="contact.html#give">Give Online</a></li>
+      </ul>
     </nav>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <p class="kicker">Welcome to Assemblies of God Ministry</p>
-        <h2>Where Faith Meets Grace</h2>
+    <div class="hero-bg" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <p class="pill"><i class="fa-solid fa-fire"></i> Prayer • Word • Discipleship • Holiness</p>
+        <h1>Welcome to a Global Ministry of Revival & Truth.</h1>
         <p class="lead">
-          Led by <strong>Pastor Benedict Gbande Gbate</strong> — raising an apostolic people,
-          lovers of prayer, grounded in holiness and purpose.
+          We are committed to raising an apostolic people—students of Scripture and lovers of prayer—growing in purity, purpose,
+          and intimacy with the Holy Spirit.
         </p>
+
         <div class="hero-actions">
-          <a class="btn btn-primary" href="sermons.html"><i class="fa-solid fa-play"></i> Watch/Listen Sermons</a>
-          <a class="btn btn-outline" href="events.html"><i class="fa-solid fa-clock"></i> Service Times</a>
+          <a class="btn" href="sermons.html"><i class="fa-solid fa-circle-play"></i> Watch Sermons</a>
+          <a class="btn btn-ghost" href="events.html"><i class="fa-solid fa-calendar-check"></i> View Events</a>
         </div>
 
-        <div class="hero-badges">
-          <div class="badge"><i class="fa-solid fa-hands-praying"></i> Prayer</div>
-          <div class="badge"><i class="fa-solid fa-fire"></i> Revival</div>
-          <div class="badge"><i class="fa-solid fa-book"></i> Discipleship</div>
+        <div class="hero-stats">
+          <div class="stat"><strong>Weekly</strong><span>Teaching Sessions</span></div>
+          <div class="stat"><strong>Online</strong><span>Global Reach</span></div>
+          <div class="stat"><strong>Holiness</strong><span>Core Mandate</span></div>
         </div>
       </div>
 
       <div class="hero-card">
-        <h3>Weekly Schedule</h3>
-        <div class="schedule">
-          <div class="row">
-            <div class="left">
-              <strong>Sunday Service</strong>
-              <span>Worship & Word</span>
-            </div>
-            <div class="right">9:00 AM</div>
+        <div class="card-top">
+          <h3>This Week at Church</h3>
+          <p class="muted">Join us in worship and teaching</p>
+        </div>
+
+        <div class="card-list">
+          <div class="card-item">
+            <i class="fa-solid fa-sun"></i>
+            <div><strong>Sunday Service</strong><span>9:00 AM & 11:00 AM</span></div>
           </div>
-          <div class="row">
-            <div class="left">
-              <strong>Midweek Teaching</strong>
-              <span>Bible Study</span>
-            </div>
-            <div class="right">Wed 7:00 PM</div>
+          <div class="card-item">
+            <i class="fa-solid fa-book-bible"></i>
+            <div><strong>Bible Study</strong><span>Wednesday • 7:00 PM</span></div>
           </div>
-          <div class="row">
-            <div class="left">
-              <strong>Prayer Meeting</strong>
-              <span>Corporate Prayer</span>
-            </div>
-            <div class="right">Sat 8:00 AM</div>
+          <div class="card-item">
+            <i class="fa-solid fa-people-group"></i>
+            <div><strong>Youth Ministry</strong><span>Friday • 6:00 PM</span></div>
+          </div>
+          <div class="card-item">
+            <i class="fa-solid fa-hands-praying"></i>
+            <div><strong>Prayer Meeting</strong><span>Saturday • 8:00 AM</span></div>
           </div>
         </div>
-        <a class="mini-link" href="events.html">See all events <i class="fa-solid fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </section>
 
-  <!-- HIGHLIGHTS -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Join Us For Worship</h2>
-      <p class="section-subtitle">Experience prayer, teaching, discipleship, and spiritual renewal.</p>
-
-      <div class="grid cards-4">
-        <div class="card">
-          <div class="icon"><i class="fa-solid fa-sun"></i></div>
-          <h3>Sunday Service</h3>
-          <p class="muted">Worship & Word</p>
-          <p class="tag">9:00 AM</p>
-        </div>
-
-        <div class="card">
-          <div class="icon"><i class="fa-solid fa-book"></i></div>
-          <h3>Bible Study</h3>
-          <p class="muted">Midweek Teaching</p>
-          <p class="tag">Wed 7:00 PM</p>
-        </div>
-
-        <div class="card">
-          <div class="icon"><i class="fa-solid fa-people-group"></i></div>
-          <h3>Youth Ministry</h3>
-          <p class="muted">Raising Purposeful Youth</p>
-          <p class="tag">Fri 6:00 PM</p>
-        </div>
-
-        <div class="card">
-          <div class="icon"><i class="fa-solid fa-hands-praying"></i></div>
-          <h3>Prayer Meeting</h3>
-          <p class="muted">Corporate Prayer</p>
-          <p class="tag">Sat 8:00 AM</p>
-        </div>
+        <a class="btn btn-wide" href="contact.html#prayer"><i class="fa-solid fa-praying-hands"></i> Submit Prayer Request</a>
       </div>
     </div>
   </section>
 
   <!-- ABOUT PREVIEW -->
-  <section class="section section-alt">
-    <div class="container two-col">
+  <section class="section">
+    <div class="container grid-2">
       <div>
-        <h2 class="section-title left">Meet Pastor Benedict Gbande Gbate</h2>
-        <p>
-          Born on <strong>27th July 1995</strong> in <strong>Tatale</strong>, Northern Region of Ghana,
-          Pastor Benedict’s journey is shaped by faith, disciplined spiritual formation, and a deep
-          commitment to prayer and the Word.
+        <h2 class="section-title">Meet Pastor Benedict</h2>
+        <p class="muted">
+          Born in Tatale (Northern Region of Ghana) and trained at the Assemblies of God Theological Seminary,
+          Pastor Benedict is committed to raising believers of uncompromising faith, holiness, purity, and integrity.
         </p>
-        <p>
-          His ministry mandate is to raise an apostolic people—students of the Word and lovers of prayer—
-          nurtured into intimacy with the Holy Spirit and holy living.
-        </p>
-        <a class="btn btn-primary" href="about.html">Read Full Biography <i class="fa-solid fa-arrow-right"></i></a>
+
+        <div class="feature-list">
+          <div class="feature">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <div><strong>Theological Training</strong><span>Diploma in Theology • Nov 2025</span></div>
+          </div>
+          <div class="feature">
+            <i class="fa-solid fa-mountain"></i>
+            <div><strong>The Qodesh Mountains</strong><span>Prayer, discipleship, revival & holiness</span></div>
+          </div>
+          <div class="feature">
+            <i class="fa-solid fa-dove"></i>
+            <div><strong>Mandate</strong><span>Raise Word-students & prayer-lovers worldwide</span></div>
+          </div>
+        </div>
+
+        <a class="btn" href="about.html"><i class="fa-solid fa-arrow-right"></i> Read Full Biography</a>
       </div>
 
-      <div class="panel">
-        <h3>Core Values</h3>
-        <ul class="list">
-          <li><i class="fa-solid fa-check"></i> Purity & Holiness</li>
-          <li><i class="fa-solid fa-check"></i> Prayer & Intimacy with God</li>
-          <li><i class="fa-solid fa-check"></i> Discipleship & Character</li>
-          <li><i class="fa-solid fa-check"></i> Integrity & Stewardship</li>
-        </ul>
-        <p class="quote">
-          “My greatest joy is seeing people transformed by the power of God’s Word and walking in the purpose He has for their lives.”
-        </p>
+      <div class="image-frame">
+        <img src="ben.jpg" alt="Pastor Benedict Gbande Gbate" loading="lazy">
+        <div class="image-caption">
+          <strong>“My greatest joy is seeing people transformed by God’s Word.”</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST SERMONS -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">Latest Sermons</h2>
+        <a class="link" href="sermons.html">View all <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="cards-3">
+        <article class="sermon">
+          <div class="sermon-thumb" style="background-image:url('https://images.unsplash.com/photo-1548625361-58a9b86aa83b?auto=format&fit=crop&w=1400&q=80');"></div>
+          <div class="sermon-body">
+            <p class="tag">Holiness</p>
+            <h3>Walking in Purity</h3>
+            <p class="muted">A call to holiness and godly character.</p>
+            <a class="btn btn-small" href="sermons.html">Watch</a>
+          </div>
+        </article>
+
+        <article class="sermon">
+          <div class="sermon-thumb" style="background-image:url('https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1400&q=80');"></div>
+          <div class="sermon-body">
+            <p class="tag">Prayer</p>
+            <h3>The Secret Place</h3>
+            <p class="muted">How intimacy with God births revival.</p>
+            <a class="btn btn-small" href="sermons.html">Listen</a>
+          </div>
+        </article>
+
+        <article class="sermon">
+          <div class="sermon-thumb" style="background-image:url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1400&q=80');"></div>
+          <div class="sermon-body">
+            <p class="tag">Discipleship</p>
+            <h3>Students of the Word</h3>
+            <p class="muted">Apostolic training through Scripture.</p>
+            <a class="btn btn-small" href="sermons.html">View</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="section">
-    <div class="container cta">
+  <section class="cta">
+    <div class="container cta-inner">
       <div>
-        <h2>Need Prayer or Counseling?</h2>
-        <p class="muted">Send a message — we’ll respond as soon as possible.</p>
+        <h2>Need counseling, prayers, or an invitation?</h2>
+        <p class="muted">Send a message — we respond as soon as possible.</p>
       </div>
-      <div class="cta-actions">
-        <a class="btn btn-outline" href="contact.html#prayer"><i class="fa-solid fa-hands-praying"></i> Prayer Request</a>
-        <a class="btn btn-primary" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a>
-      </div>
+      <a class="btn" href="contact.html"><i class="fa-solid fa-envelope"></i> Contact Us</a>
     </div>
   </section>
 
@@ -180,16 +189,20 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <h3 class="footer-title">Assemblies of God Ministry</h3>
-        <p class="muted">Tatale / Wa, Ghana</p>
-        <p class="muted"><i class="fa-solid fa-phone"></i> 0201050705</p>
-        <p class="muted"><i class="fa-solid fa-envelope"></i> beneictgbate@gmail.com</p>
+        <h3 class="footer-title">Pastor Benedict Gbande Gbate</h3>
+        <p class="muted">Assemblies of God Ministry • The Qodesh Mountains</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
       </div>
 
       <div>
         <h4>Quick Links</h4>
         <ul class="footer-links">
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html">Biography</a></li>
           <li><a href="sermons.html">Sermons</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -197,20 +210,17 @@
       </div>
 
       <div>
-        <h4>Connect</h4>
-        <div class="social">
-          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#" aria-label="X"><i class="fa-brands fa-twitter"></i></a>
-        </div>
-        <p class="muted small">Subscribe for updates (coming soon).</p>
+        <h4>Newsletter</h4>
+        <p class="muted">Get updates on teachings and events.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email" required>
+          <button type="submit" class="btn btn-small">Subscribe</button>
+        </form>
       </div>
     </div>
 
     <div class="container footer-bottom">
-      <p class="muted small">© <span id="year"></span> Assemblies of God Ministry. All rights reserved.</p>
-      <p class="muted small">Built for God’s glory ✨</p>
+      <p>© <span id="year"></span> Pastor Benedict Gbande Gbate. All rights reserved.</p>
     </div>
   </footer>
 
